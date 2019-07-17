@@ -1,12 +1,12 @@
 ///
-/// stef's NodeJS Webserver for Docker & Kubernetes experiments
+/// Stef's NodeJS Webserver for Docker & Kubernetes experiments
 ///
 var myip = require('ip');
 var myos = require('os');
 var mycounter = require("./sdsmodules.js");
 var http = require('http');
 const hostname = '0.0.0.0';
-const port = 3000;
+const port = 8080;
 
 //const args = process.argv.slice(2);
 
@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   var vcounter =  mycounter.getcounter();
   /// 
   res.writeHead(200, {"Content-Type": "text/html"});
-  res.write("<b>Hello from Stef's Web App</b><br>");
+  res.write("<b>Sample Web App</b><br>");
   res.write("<b>** Special HPE Emerging Tech Edition **</b><br><br>");
   res.write("      Node Name: " + myos.hostname +  "<br>");
   res.write("   Node Address: " + myip.address() + " port: "+ server.address().port + "<br>");
