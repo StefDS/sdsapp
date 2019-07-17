@@ -1,0 +1,18 @@
+{
+  "name": "sdsmain",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Stefan DS",
+  "main": "sdsmain.js",
+  "private": true,
+  "scripts": {
+    "start": "node sdsmain.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StefDS/MyRepository"
+  },
+  "dependencies": {
+    "ip": "^1.1.5"
+  }
+}
