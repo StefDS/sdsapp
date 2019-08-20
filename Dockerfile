@@ -21,8 +21,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 COPY ./app.log /data/app.log
-
 EXPOSE 3000
-
 # CMD node sdsmain.js
 CMD [ "npm", "start" ]

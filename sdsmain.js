@@ -6,7 +6,7 @@ var myos = require('os');
 var mycounter = require("./sdsmodules.js");
 var http = require('http');
 const hostname = '0.0.0.0';
-const port = 8080;
+const port = 8088;
 
 //const args = process.argv.slice(2);
 
@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
   /// 
   res.writeHead(200, {"Content-Type": "text/html"});
   res.write("<b>Sample Web App</b><br>");
-  res.write("<b>** Special HPE Emerging Tech Edition **</b><br><br>");
+  res.write("<b>** New Tech In Action - August 2019 for fun**</b><br><br>");
   res.write("      Node Name: " + myos.hostname +  "<br>");
   res.write("   Node Address: " + myip.address() + " port: "+ server.address().port + "<br>");
   res.write("Storage Counter: " + vcounter + "<br>");

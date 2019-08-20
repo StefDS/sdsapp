@@ -3,7 +3,7 @@ exports.getcounter = function() {
     /// reading File
     console.log("Open './data/app.log' file");
     var data = fs.readFileSync('./data/app.log').toString();
-    console.log("file content: " + data);
+    console.log("file content is: " + data);
     var thiscounter = parseInt(data.substr(8));
     thiscounter += 1;
     ///
