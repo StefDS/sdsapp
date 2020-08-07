@@ -7,9 +7,9 @@ metadata:
 spec:
   selector:
     run: sdsapp
-    ports:
-    - name: sdsapp
-        protocol: TCP
-        port: 8088
-        targetPort: 3000
-    type: NodePort
+  ports:
+  - name: sdsapp
+      protocol: TCP
+      port: 8088
+      targetPort: 3000
+  type: NodePort
