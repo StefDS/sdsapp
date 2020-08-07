@@ -1,2 +1,3 @@
 # sdsapp
-Sample NodeJS app to demonstrate container deployments using statefull applications.
+## Sample NodeJS app to demonstrate container deployments on HPE Ezmeral Container Platform running statefull applications.
+
