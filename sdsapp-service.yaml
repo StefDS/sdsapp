@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: sdsapp-service
   labels: 
-  hpecp.hpe.com/hpecp-internal-gateway: "true"
+    hpecp.hpe.com/hpecp-internal-gateway: "true"
 spec:
   selector:
     run: sdsapp
