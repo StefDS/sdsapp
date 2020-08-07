@@ -1,2 +1,2 @@
 # sdsapp
-Sample NodeJS app to demonstrate to use of container deployments using statefull applications. 
+Sample NodeJS app to demonstrate container deployments using statefull applications.
