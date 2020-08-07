@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sdsapp
+spec:
+  selector:
+    matchLabels:
+      run: sdsapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: sdsapp
+    spec:
+      containers:
+        - name: sdsapp
+          image: "stefds/sdsapp"
+          ports:
+            - containerPort: 8088
