@@ -22,5 +22,5 @@ spec:
           image: stefds/sdsapp
           name: sdsapp
           volumeMounts:
-        - mountPath: "/usr/src/app/data"
-          name: sdsapp-data
+            - mountPath: "/usr/src/app/data"
+              name: sdsapp-data
