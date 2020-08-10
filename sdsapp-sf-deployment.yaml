@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: sdsapp-sl
+  name: sdsapp-statefull
 spec: 
   replicas: 2
   volumes:
@@ -11,11 +11,11 @@ spec:
       claimName: sdsapp-pvc
   selector: 
     matchLabels: 
-      run: sdsapp-sl
+      run: sdsapp-statefull
   template: 
     metadata: 
       labels: 
-        run: sdsapp-sl
+        run: sdsapp-statefull
     spec: 
       containers: 
         - 
