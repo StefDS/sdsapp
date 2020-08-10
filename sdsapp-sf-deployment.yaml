@@ -1,0 +1,26 @@
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: sdsapp-sl
+spec: 
+  replicas: 2
+  volumes:
+  - name: sdsapp-data
+    persistentVolumeClaim:
+      claimName: sdsapp-pvc
+  selector: 
+    matchLabels: 
+      run: sdsapp-sl
+  template: 
+    metadata: 
+      labels: 
+        run: sdsapp-sl
+    spec: 
+      containers: 
+        - 
+          image: stefds/sdsapp
+          name: sdsapp
+          volumeMounts:
+        - mountPath: "/usr/src/app/data"
+          name: sdsapp-data
