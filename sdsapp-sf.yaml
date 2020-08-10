@@ -7,10 +7,10 @@ spec:
   volumes:
     - name: sdsapp-data
       persistentVolumeClaim:
-        claimName: sdsapp-pvc
-   containers:
-     - name: sdsapp-sf-pod
-       image: stefds/sdsapp
-       volumeMounts:
-         - mountPath: "/usr/src/app/data"
-           name: sdsapp-data
+        claimName: sdsapp-pvc 
+  containers:
+    - name: sdsapp-sf-pod
+      image: stefds/sdsapp
+      volumeMounts:
+        - mountPath: "/usr/src/app/data"
+          name: sdsapp-data
