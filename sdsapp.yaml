@@ -1,0 +1,18 @@
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sdsapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: sdsapp
+  template:
+    metadata:
+      labels:
+        run: sdsapp
+    spec: 
+      containers:
+        - name: sdsapp
+          image: stefds/sdsapp
