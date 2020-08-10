@@ -5,10 +5,13 @@ metadata:
   name: sdsapp-statefull
 spec: 
   replicas: 1
+  selector: 
+    matchLabels: 
+      run: sdsapp-statefull
   template: 
     metadata: 
       labels: 
-        app: sdsapp-statefull
+        run: sdsapp-statefull
     spec: 
       containers: 
         - name: sdsapp
