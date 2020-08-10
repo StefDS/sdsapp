@@ -1,15 +1,15 @@
----
-apiVersion: app/v1
+apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: sdsapp-service
-spec: 
-  selector: 
-    port: 8080
-    ports: 
-      - 
-      name: sdsapp
-    protocol: TCP
+  labels: 
+    hpecp.hpe.com/hpecp-internal-gateway: "true"
+spec:
+  selector:
     run: sdsapp
+  ports:
+  - name: sdsapp
+    protocol: TCP
+    port: 8088
     targetPort: 3000
-    type: NodePort
+  type: NodePort
