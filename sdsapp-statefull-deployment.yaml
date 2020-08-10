@@ -4,18 +4,15 @@ kind: Deployment
 metadata: 
   name: sdsapp-statefull
 spec: 
-  replicas: 2
-  selector: 
-    matchLabels: 
-      run: sdsapp-statefull
+  replicas: 1
   template: 
     metadata: 
       labels: 
-        run: sdsapp-statefull
+        app: sdsapp-statefull
     spec: 
       containers: 
-        - image: stefds/sdsapp
-          name: sdsapp
+        - name: sdsapp
+          image: stefds/sdsapp
           volumeMounts:
           - name: sdsapp-data
             mountPath: "/usr/src/app/data"
