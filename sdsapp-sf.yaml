@@ -1,14 +1,14 @@
 --- 
 apiVersion: v1
 kind: Pod
-metadata: 
+metadata:
   name: sdsapp-sf
-spec: 
-  volumes: 
+spec:
+  volumes:
     - name: sdsapp-data
       persistentVolumeClaim:
         claimName: sdsapp-pvc
-   containers: 
+   containers:
      - name: sdsapp-sf-pod
        image: stefds/sdsapp
        volumeMounts:
