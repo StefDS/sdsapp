@@ -1,8 +1,4 @@
 ---
-#
-# Example of deploying a statefull application 
-# without refactoring using KubeDirector.
-#
 apiVersion: kubedirector.hpe.com/v1beta1
 kind: KubeDirectorApp
 metadata:
@@ -12,6 +8,10 @@ spec:
   defaultPersistDirs:
   - "/usr"
   - "/data"
+  defaultEventList:
+  - configure
+  - addnodes
+  - delnodes
   config:
     roleServices:
     - serviceIDs:
@@ -21,12 +21,19 @@ spec:
     - sdsapp-kubedir
   label:
     name: sdsapp-kubedir
-    description: StefDS Statefull application example
-  distroId: stefds/sdsapp
-  version: 'latest'
-   configSchemaVersion: 1
+    description: StefDS Statefull application example  
   defaultImageRepoTag: docker.io/stefds/sdsapp:latest
   defaultConfigPackage: 
+  distroId: stefds/sdsapp
+  version: 'latest'
+  configSchemaVersion: 1
+  services:
+  - endpoint:
+      port: 80
+      isDashboard: true
+    id: http
+    label:
+      name: HTTP
   roles:
   - cardinality: 1+
     id: sdsapp-kubedir
