@@ -24,13 +24,13 @@ spec:
     description: StefDS Statefull application example  
   defaultImageRepoTag: docker.io/stefds/sdsapp:latest
   defaultConfigPackage: 
-  distroId: stefds/sdsapp
+  distroID: stefds/sdsapp
   version: 'latest'
-  configSchemaVersion: 1
+  configSchemaVersion: 7
   services:
   - endpoint:
-      port: 80
-      isDashboard: true
+      port: 3000
+      isDashboard: false
     id: http
     label:
       name: HTTP
