@@ -1,0 +1,53 @@
+{
+    "apiVersion": "kubedirector.hpe.com/v1beta1",
+    "kind": "KubeDirectorApp",
+    "metadata": {
+        "name" : "Covid Dashboard"
+    },
+
+    "spec" : {
+        "systemdRequired": true,
+        "defaultPersistDirs" : ["/home"],
+        "defaultEventList" : ["configure", "addnodes", "delnodes"],
+        "config": {
+            "roleServices": [
+                {
+                    "serviceIDs": [
+                        "http"
+                    ],
+                    "roleID": "NGINX_CIC_Covid"
+                }
+            ],
+            "selectedRoles": [
+                "NGINX_CIC_Covid"
+            ]
+        },
+        "label": {
+            "name": "CIC Covid",
+            "description": "CIC Covid Dashboard - NGINX Kibana hosted"
+        },
+        "distroID": "yallandit/covidcicdemo:lastest",
+        "version": "1.0",
+        "configSchemaVersion": 1,
+        "services": [
+            {
+                "endpoint": {
+                    "port": 80,
+                    "isDashboard": true
+                },
+                "id": "http",
+                "label": {
+                    "name": "HTTP"
+                }
+            }
+        ],
+        "defaultImageRepoTag": "docker.io/yallandit/covidcicdemo:lastest",
+        "defaultConfigPackage": null,
+        "roles": [
+            {
+                "cardinality": "1+",
+                "id": "cic_covid"
+            }
+        ]
+    }
+}
