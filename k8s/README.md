@@ -1,1 +1,1 @@
-## Use for Kubernets Pod deployments with HPE Ezmeral Container Platform
+# YAML files use by kubectl for Kubernets deployments managed by HPE Ezmeral Container Platform
