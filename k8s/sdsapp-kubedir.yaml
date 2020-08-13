@@ -6,8 +6,7 @@ metadata:
 spec:
   systemdRequired: true
   defaultPersistDirs:
-  - "/usr"
-  - "/data"
+  - "/usr/src/data"
   defaultEventList:
   - configure
   - addnodes
