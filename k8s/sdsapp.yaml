@@ -27,7 +27,7 @@ spec:
   selector:
     run: sdsapp
   ports:
-  - name: sdsapp
+  - name: http
     protocol: TCP
     port: 8088
     targetPort: 3000
