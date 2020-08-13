@@ -16,3 +16,19 @@ spec:
       containers:
         - name: sdsapp
           image: stefds/sdsapp
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sdsapp-service
+  labels: 
+    hpecp.hpe.com/hpecp-internal-gateway: "true"
+spec:
+  selector:
+    run: sdsapp
+  ports:
+  - name: sdsapp
+    protocol: TCP
+    port: 8088
+    targetPort: 3000
+  type: NodePort
