@@ -1,1 +1,4 @@
-{"counter": 227, "hostname": "PC-ubuntu"}
+{
+    "counter": 1,
+    "hostname": "test"
+}
