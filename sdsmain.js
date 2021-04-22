@@ -17,7 +17,7 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, {"Content-Type": "text/html"});
   res.write("<b>Sample Web App</b><br>");
   res.write("<img src='logo.png' alt='HPE logo'><br>");
-  res.write("<b>** New Tech In Action - Summer 2021 **</b><br><br>");
+  res.write("<b>** New Tech In Action - Summer 2021 edtion**</b><br><br>");
   res.write("      Node Name: " + vhost +  "<br>");
   res.write("   Node Address: " + myip.address() + " port: "+ server.address().port + "<br>");
   res.write("        Counter: " + vcounter + "<br>");
