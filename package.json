@@ -13,6 +13,6 @@
     "url": "https://github.com/StefDS/MyRepository"
   },
   "dependencies": {
-    "ip": "^1.1.5"
+    "ip": "^1.1.9"
   }
 }
